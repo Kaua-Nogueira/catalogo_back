@@ -2,7 +2,6 @@ FROM dunglas/frankenphp:1-php8.2-alpine
 
 # Set server name (can be overridden at runtime)
 ENV SERVER_NAME=:8000
-ENV FRANKENPHP_CONFIG="document_root /app/public"
 
 # Install php extensions needed for Laravel
 RUN install-php-extensions \
