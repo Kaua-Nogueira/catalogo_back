@@ -1,7 +1,7 @@
 FROM dunglas/frankenphp:1-php8.2-alpine
 
 # Set server name (can be overridden at runtime)
-ENV SERVER_NAME=:8000
+ENV SERVER_NAME=:80
 
 # Install php extensions needed for Laravel
 RUN install-php-extensions \
@@ -40,7 +40,7 @@ COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Expose port
-EXPOSE 8000
+EXPOSE 80
 
 # Set entrypoint
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
